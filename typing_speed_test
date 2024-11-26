@@ -1,0 +1,18 @@
+# typing_speed_test.py
+
+import time
+
+def typing_test(sentence):
+    print("Type the following:")
+    print(sentence)
+    input("Press Enter when ready...")
+    start = time.time()
+    user_input = input("Type here: ")
+    end = time.time()
+    if user_input == sentence:
+        print(f"Great! You took {end - start:.2f} seconds.")
+    else:
+        print("Your input didn't match the sentence!")
+
+# Sample usage
+typing_test("The quick brown fox jumps over the lazy dog.")
